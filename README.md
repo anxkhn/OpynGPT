@@ -42,4 +42,4 @@ If you'd like to contribute to FreeGPTpy, feel free to fork the repository and s
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPLv3 License - check out [this website.](https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3) for more information.
