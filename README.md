@@ -1,10 +1,10 @@
 # FreeGPTpy
 
-FreeGPTpy is a Python script that interacts with the OpenAI GPT-3.5 Turbo API to generate natural language responses based on user input. The unique feature of FreeGPTpy is that it operates without the need for authentication or API keys, making it an easy-to-use and accessible tool.
+FreeGPTpy is a Python module that facilitates interactions with the OpenAI GPT-3.5 Turbo API to generate natural language responses based on user input. Notably, FreeGPTpy operates without requiring authentication or API keys, providing a straightforward and accessible tool for natural language generation.
 
 ## Prerequisites
 
-Before running FreeGPTpy, make sure you have the following:
+Before using FreeGPTpy, ensure you have the following:
 
 - Python 3.x installed
 - The `requests` library installed. You can install it using:
@@ -13,22 +13,30 @@ Before running FreeGPTpy, make sure you have the following:
   pip install requests
   ```
 
+## Installation
+
+You can install FreeGPTpy using pip:
+
+```bash
+pip install freegptpy
+```
+
 ## Usage
 
-1. Clone the repository:
+1. Import the `prompt` function from FreeGPTpy:
 
-   ```bash
-   git clone https://github.com/anxkhn/FreeGPTpy.git
-   cd FreeGPTpy
+   ```python
+   from freegptpy import prompt
    ```
 
-2. Run the script:
+2. Use the `prompt` function to generate natural language responses:
 
-   ```bash
-   python main.py
+   ```python
+   user_input = "Write a factorial code in python."
+   response = prompt(user_input)
+
+   print(response)
    ```
-
-3. Follow the prompts to enter your input message.
 
 ## Features
 
@@ -42,4 +50,4 @@ If you'd like to contribute to FreeGPTpy, feel free to fork the repository and s
 
 ## License
 
-This project is licensed under the GPLv3 License - check out [this website.](https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3) for more information.
+This project is licensed under the GPLv3 License - check out [this website](https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3) for more information.

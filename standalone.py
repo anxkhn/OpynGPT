@@ -2,10 +2,12 @@ import requests
 import json
 from json import JSONDecodeError
 
+
 def get_user_input():
     return input("Enter your input message: ")
 
-def make_api_request(input_message):
+
+def prompt(input_message):
     url = "https://ai.fakeopen.com/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",
@@ -26,12 +28,14 @@ def make_api_request(input_message):
         "top_p": 1
     }
     payload_json = json.dumps(payload)
-    response = requests.post(url, headers=headers, data=payload_json, stream=True)
+    response = requests.post(url, headers=headers,
+                             data=payload_json, stream=True)
     return response
+
 
 def extract_content(line):
     line_str = line.decode('utf-8')
-    
+
     if "data:" not in line_str:
         return None
 
@@ -43,12 +47,13 @@ def extract_content(line):
         return content
     except JSONDecodeError as e:
         pass
-    
+
     return None
 
+
 def main():
-    input_message = get_user_input()
-    response = make_api_request(input_message)
+    prmopt_message = get_user_input()
+    response = prompt(prmopt_message)
 
     if response.status_code == 200:
         for line in response.iter_lines():
@@ -60,6 +65,7 @@ def main():
         response = make_api_request(input_message)
     else:
         print(f"Error: {response.status_code}, {response.text}")
+
 
 if __name__ == "__main__":
     main()
