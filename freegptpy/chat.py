@@ -7,7 +7,9 @@ def prompt(input_message):
     url = "https://ai.fakeopen.com/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",
-        "authorization": "Bearer pk-this-is-a-real-free-pool-token-for-everyone"
+        "authorization": "Bearer pk-this-is-a-real-free-pool-token-for-everyone",
+        "Origin": "https://chat.geekgpt.org",
+        "Referrer": "https://chat.geekgpt.org/"
     }
     payload = {
         "frequency_penalty": 0,
