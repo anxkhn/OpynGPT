@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='opyngpt',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(),
     install_requires=[
         'requests',
@@ -60,6 +60,8 @@ setup(
     ## License
 
     This project is licensed under the GPLv3 License - check out [this website](https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3) for more information.
+
+    [GitHub Repository](https://github.com/anxkhn/OpynGPT)
     """,
     long_description_content_type='text/markdown',
     author='Anas Khan',
