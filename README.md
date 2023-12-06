@@ -1,5 +1,7 @@
 # OpynGPT
 
+![Picture1](https://github.com/anxkhn/OpynGPT/assets/83116240/be25ef97-9e61-42a4-bc2f-38cfecfc5c4c)
+
 OpynGPT is a Python module that facilitates interactions with the OpenAI GPT-3.5 Turbo API to generate natural language responses based on user input. Notably, OpynGPT operates without requiring authentication or API keys, providing a straightforward and accessible tool for natural language generation.
 
 ## Prerequisites
