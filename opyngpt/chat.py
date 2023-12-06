@@ -30,20 +30,21 @@ def prompt(input_message):
                              data=payload_json, stream=True)
 
     if response.status_code == 200:
+        content_lines = []
         for line in response.iter_lines():
             line_str = line.decode('utf-8')
             if "data:" not in line_str:
                 continue
-
             json_str = line_str.split("data: ")[1]
-
             try:
                 data_dict = json.loads(json_str)
                 content = data_dict['choices'][0]['delta'].get('content', None)
                 if content is not None:
-                    return content
+                    content_lines.append(content)
             except JSONDecodeError as e:
                 pass
+        return ''.join(content_lines)
+
     elif response.status_code == 401:
         print(f"Error: {response.status_code}, Trying again")
         return prompt(input_message)
