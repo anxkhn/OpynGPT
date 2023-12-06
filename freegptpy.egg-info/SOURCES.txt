@@ -1,9 +1,0 @@
-README.md
-setup.py
-freegptpy/__init__.py
-freegptpy/chat.py
-freegptpy.egg-info/PKG-INFO
-freegptpy.egg-info/SOURCES.txt
-freegptpy.egg-info/dependency_links.txt
-freegptpy.egg-info/requires.txt
-freegptpy.egg-info/top_level.txt
