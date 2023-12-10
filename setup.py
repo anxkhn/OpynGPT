@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='opyngpt',
-    version='0.1.3',
+    version='0.1.4',
     packages=find_packages(),
     install_requires=[
         'requests',
@@ -17,7 +17,7 @@ Prerequisites
 Before using OpynGPT, ensure you have the following:
 
 - Python 3.x installed
-- The `requests` library installed. You can install it using:
+- The `requests` library installed. You can manually install it using:
 
   ::
   

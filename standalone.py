@@ -62,9 +62,9 @@ def main():
             content = extract_content(line)
             if content is not None:
                 print(content, end="")
-    elif response.status_code == 401:
-        print(f"Error: {response.status_code}, Trying again")
-        response = make_api_request(input_message)
+    elif response.status_code == 401 or response.status_code == 429:
+        print(f"Error: {response.status_code}, Trying again.")
+        response = prompt(input_message)
     else:
         print(f"Error: {response.status_code}, {response.text}")
 

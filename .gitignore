@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.pypirc
 
 # Spyder project settings
 .spyderproject
@@ -148,6 +149,7 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
+.steps
 
 # Cython debug symbols
 cython_debug/

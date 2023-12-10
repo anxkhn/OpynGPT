@@ -9,7 +9,7 @@ OpynGPT is a Python module that facilitates interactions with the OpenAI GPT-3.5
 Before using OpynGPT, ensure you have the following:
 
 - Python 3.x installed
-- The `requests` library installed. You can install it using:
+- The `requests` library installed. You can manually install it using:
 
   ```bash
   pip install requests

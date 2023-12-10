@@ -45,8 +45,8 @@ def prompt(input_message):
                 pass
         return ''.join(content_lines)
 
-    elif response.status_code == 401:
-        print(f"Error: {response.status_code}, Trying again")
-        return prompt(input_message)
+    elif response.status_code == 401 or response.status_code == 429:
+        print(f"Error: {response.status_code}, Trying again.")
+        response = prompt(input_message)
     else:
         return (f"Error: {response.status_code}, {response.text}")
