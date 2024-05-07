@@ -8,11 +8,7 @@ setup(
         "requests",
     ],
     description="Supercharge your projects with LLMs. No API keys required.",
-        entry_points={
-        'console_scripts': [
-            'opyngpt = opyngpt.chat:main'
-        ]
-    },
+    entry_points={"console_scripts": ["opyngpt = opyngpt.chat:main"]},
     long_description="""
 OpynGPT
 ===========================================================================

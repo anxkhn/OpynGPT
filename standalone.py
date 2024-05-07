@@ -1,6 +1,4 @@
 import json
-from json import JSONDecodeError
-
 import requests
 
 
