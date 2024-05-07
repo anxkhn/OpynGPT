@@ -2,15 +2,23 @@ from setuptools import find_packages, setup
 
 setup(
     name="opyngpt",
-    version="0.2.0",
+    version="0.3.0",
     packages=find_packages(),
     install_requires=[
         "requests",
     ],
-    description="Python module for interacting with the LLMs without API authentication.",
+    description="Supercharge your projects with LLMs. No API keys required.",
+        entry_points={
+        'console_scripts': [
+            'opyngpt = opyngpt.chat:main'
+        ]
+    },
     long_description="""
 OpynGPT
 ===========================================================================
+
+Supercharge your projects with the Power of Large Language Models.
+------------------------------------------------------------------
 
 OpynGPT is a Python module that empowers developers to effortlessly
 harness the capabilities of large language models (LLMs) without the
@@ -33,10 +41,16 @@ Key Features
    functions, OpynGPT is the perfect starting point for developers new
    to language models, allowing them to explore and experiment with
    ease.
+-  **Command-Line Interface**: Interact with OpynGPT via the command
+   line for both interactive sessions and single queries, providing
+   flexibility and ease of use directly from the terminal.
 -  **Phind Model Integration**: Inspired by the renowned
    `tgpt <https://github.com/aandrew-me/tgpt/>`__ project, OpynGPT
    utilizes the powerful Phind Model, ensuring high-quality language
    generation and understanding capabilities.
+-  **Open-Source**: OpynGPT is an open-source project, allowing
+   developers to contribute, customize, and extend its functionality to
+   suit their specific needs and requirements.
 
 Getting Started
 ---------------
@@ -59,10 +73,19 @@ Installing OpynGPT is as simple as running the following command:
 
    pip install opyngpt
 
-Usage
-~~~~~
+To install the latest version from the GitHub repository, use:
 
-Leveraging the power of OpynGPT is straightforward:
+.. code:: bash
+
+   pip install git+https://github.com/anxkhn/OpynGPT.git
+
+Usage
+-----
+
+OpynGPT in python applications is straightforward and easy.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here’s a quick guide to get you started:
 
 1. Import the ``prompt`` function from the OpynGPT module:
 
@@ -83,8 +106,50 @@ OpynGPT will process your input and return a relevant response,
 empowering you to integrate language models into your projects
 seamlessly.
 
+OpynGPT Command Line Interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Interactive Mode:
+~~~~~~~~~~~~~~~~~
+
+To enter the interactive mode, simply open your terminal and type
+``opyngpt``. Then you can enter your messages and receive responses
+interactively. Type ``exit`` or press ``Ctrl+C`` to quit the interactive
+mode.
+
+Example:
+
+::
+
+   $ opyngpt
+   Enter your message (type 'exit' to quit): Hello, how are you?
+   [OpynGPT]: I'm doing well, thank you for asking. How can I assist you today?
+   Enter your message (type 'exit' to quit): What is the capital of France?
+   [OpynGPT]: The capital of France is Paris.
+   Enter your message (type 'exit' to quit): exit
+
+Single Query:
+~~~~~~~~~~~~~
+
+To make a single query, use ``opyngpt "your query"`` in your terminal,
+replacing ``"your query"`` with your actual query.
+
+Example:
+
+.. code:: bash
+
+   $ opyngpt "What is the capital of Japan?"
+   [OpynGPT]: The capital of Japan is Tokyo.
+
 Changelog
 ---------
+
+Version 0.3.0
+~~~~~~~~~~~~~
+
+-  Added Command Line Interface (CLI)
+-  Added Interactive Mode to CLI
+-  Improved error handling
 
 Version 0.2.0
 ~~~~~~~~~~~~~
@@ -95,6 +160,11 @@ Version 0.1.4
 ~~~~~~~~~~~~~
 
 -  Bug free working version with proper error handling
+
+Version 0.1.0
+~~~~~~~~~~~~~
+
+-  Initial release with basic functionality released as *FreeGPTpy*
 
 Contributing
 ------------
@@ -114,11 +184,6 @@ License
 OpynGPT is licensed under the GPLv3 License. For more information about
 this license, please visit `this
 website <https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3>`__.
-
-GitHub Repository
------------------
-
-`GitHub Repository <https://github.com/anxkhn/OpynGPT>`_
 """,
     long_description_content_type="text/x-rst",
     author="Anas Khan",

@@ -1,7 +1,6 @@
 import json
-
 import requests
-
+import sys
 
 def prompt(input_message):
     url = "https://https.extension.phind.com/agent/"
@@ -44,3 +43,19 @@ def prompt(input_message):
         response = prompt(input_message)
     else:
         return f"Error: {response.status_code}, {response.text}"
+
+def main():
+    if len(sys.argv) == 1:
+        while True:
+            input_message = input("Enter your message (type 'exit' to quit): ")
+            if input_message.lower() == 'exit':
+                break
+            response = prompt(input_message)
+            print(response)
+    else:
+        input_message = ' '.join(sys.argv[1:])
+        response = prompt(input_message)
+        print(response)
+
+if __name__ == "__main__":
+    main()
