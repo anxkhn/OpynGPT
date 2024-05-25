@@ -46,6 +46,7 @@ def prompt(input_message):
     else:
         return f"Error: {response.status_code}, {response.text}"
 
+
 def prompt_with_context(input_message, conversation_history):
     url = "https://https.extension.phind.com/agent/"
     headers = {
@@ -88,14 +89,24 @@ def prompt_with_context(input_message, conversation_history):
     else:
         return f"Error: {response.status_code}, {response.text}"
 
+
 def main():
     if len(sys.argv) == 1:
+        print("Welcome to OpynGPT Chat! Type 'exit' to quit.")
+        conversation_history = []
         while True:
-            input_message = input("Enter your message (type 'exit' to quit): ")
+            input_message = input("You: ")
             if input_message.lower() == "exit":
+                print(
+                    "Thank you for using OpynGPT Chat! Feel free to leave a star on GitHub: https://github.com/anxkhn/OpynGPT. Bye!"
+                )
                 break
-            response = prompt(input_message)
-            print(response)
+            conversation_history.append(
+                {"content": input_message, "role": "user"})
+            response = prompt_with_context(input_message, conversation_history)
+            conversation_history.append(
+                {"content": response, "role": "assistant"})
+            print(f"Assistant: {response}")
     else:
         input_message = " ".join(sys.argv[1:])
         response = prompt(input_message)

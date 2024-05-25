@@ -90,6 +90,12 @@ $ opyngpt "What is the capital of Japan?"
 
 ## Changelog
 
+### Version 0.4.0
+
+- Added support for prompt with context
+- Interactive Mode now supports context
+- Special thanks to [@devout-coder](https://github.com/devout-coder/) for the contribution
+
 ### Version 0.3.0
 
 - Added Command Line Interface (CLI)
