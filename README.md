@@ -4,6 +4,10 @@
 
 ## Supercharge your projects with the Power of Large Language Models.
 
+[![Current Version : ](https://img.shields.io/badge/Version-0.4.0-blue.svg)](https://pypi.org/project/opyngpt/0.4.0/)
+[![Downloads](https://img.shields.io/pepy/dt/opyngpt?label=Downloads)](https://pepy.tech/project/opyngpt)
+
+
 OpynGPT is a Python module that empowers developers to effortlessly harness the capabilities of large language models (LLMs) without the need for authentication or API keys. Designed with simplicity and accessibility in mind, OpynGPT supercharges your Python projects by providing natural language generation and understanding capabilities, making it an invaluable tool for developers of all skill levels.
 
 ## Key Features
